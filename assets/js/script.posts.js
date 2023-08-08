@@ -71,8 +71,8 @@ function showPosts() {
         <p><strong>Autor: </strong>${post.author}</p>
         <p><strong>Data de Publicação: </strong>${post.date}</p>
 
-        <button onclik= "editPost(${index})">Editar</button>
-        <button onclik= "deletePost(${index})">Excluir</button>
+        <button onclick= "editPost(${index})">Editar</button>
+        <button onclick= "removePost(${index})">Excluir</button>
         </div>
     
         `;
