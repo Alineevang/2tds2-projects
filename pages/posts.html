@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,40 @@
 </head>
 
 <body>
-    
+    <main>
+        <h1>Próximos Posts</h1>
+        <div id="postForm">
+            <div>
+                <label for="">Título</label>
+                <input type="text" id="title" name="title" required />
+            </div>
+
+            <div>
+                <label for="">Categoria</label>
+                <input type="text" id="category" name="category" required />
+            </div>
+
+            <div>
+                <label for="resume">Resumo</label>
+                <textarea type="text" id="resume" name="resume" rows="4" required></textarea>
+            </div>
+
+            <div>
+                <label for="">Autor</label>
+                <input type="text" id="autor" name="autor" required />
+            </div>
+
+            <div>
+                <label for="date">Data de Publicação</label>
+                <input type="date" id="date" name="date" required />
+            </div>
+
+        </div>
+
+        <button>Cadastrar</button>
+
+    </main>
+</div>
 </body>
+
 </html>
