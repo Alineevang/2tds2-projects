@@ -20,11 +20,40 @@ main {
     justify-content: center;
 }
 
-#postsForm {
+#postForm {
     max-width: 500px;
     width: 100%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
+}
+
+label,
+input,
+textarea {
+    display: block; 
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 500px;
+}
+
+textarea {
+    resize: none; 
+    /*it takes away the flexibility of textarea*/
+}
+
+button {
+    background-color: #d30000;
+    color: #fff;
+    cursor: pointe;
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #a00000;
+    transition: 0.3s;
 }
