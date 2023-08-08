@@ -8,13 +8,14 @@ function savePost() {
     const date = document.getElementById("date").value;
 
     if (title && category && resume && author && date) {
-        storePost(title, resume, author, date);
+        storePost(title, category, resume, author, date);
         cleanFields();
+        showPosts();
     } else {
         alert ("Preencha todos os campos!")
     }
 
-storePost (title, resume, author, date);
+storePost (title, category, resume, author, date);
 
 cleanFields()
 
@@ -31,14 +32,37 @@ function cleanFields() {
 
 function storePost (title, category, resume, author, date) {
     const post = {
-        title: title, //posso tirar minha variavel
-        category: category,
-        resume: resume,
-        author: author,
-        date: date
-    }
+        title, //posso colocar minha variavel
+        category,
+        resume,
+        author,
+        date,
+    };
 
     posts.push(post);
 
     console.log(posts);
+}
+
+function showPosts() {
+    let showContent = "";
+
+    posts.forEach((post, index) => {
+        showContent += `
+        <div class= "itemPost">
+        <h2>${post.title}</h2>
+        <p><strong>Categoria: </strong>${post.category}</p>
+        <p><strong>Resumo: </strong>${post.resume}</p>
+        <p><strong>Autor: </strong>${post.author}</p>
+        <p><strong>Data de Publicação: </strong>${post.date}</p>
+
+        <button onclik= "editPost(${index})">Editar</button>
+        <button onclik= "deletePost(${index})">Excluir</button>
+        </div>
+    
+        `;
+    })
+
+    document.getElementById("list").innerHTML = showContent;
+    
 }
