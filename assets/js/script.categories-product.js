@@ -29,6 +29,19 @@ class CategoryService {
         this.categories.push(category);
     }
 }
+class ProductsService {
+    constructor() {
+        this.products = [];
+        this.nextProductId = 0;
+    }
+
+    addProduct(name, price, category) {
+        const id = this.nextProductId ++;
+        const products = new Products (id, name, price, category);
+        category.products.push(product);
+        this.products.push(product);
+    }
+}
 
 const categoryList = new CategoryService();
 
@@ -36,6 +49,6 @@ function createCategory() {
     const categoryName = "Doce";
 
     categoryList.addCategory(categoryName);
-    
+
     console.log(categoryList.categories);
 }
