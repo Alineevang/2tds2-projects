@@ -1,69 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins";
 }
-
-body {
+body{
     background-color: #f4f4f4;
 }
-
-#container {
-    max-width: 50rem /*equivale a 800px*/;
+#container{
+    max-width: 50rem;
     margin: 0 auto;
     background-color: #fff;
-    padding: 1.25rem /*equivale a 20px*/;
-    border-radius: 0.5rem /*equivale a 8px*/;
-    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    border-radius: 0.31rem;
+    box-shadow:  0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1{
     text-align: center;
-    margin-bottom: 1.25rem; /*equivale a 20px*/
+    margin-bottom: 1.25rem;
 }
-
-h2 {
-    margin-bottom: 1.25rem; /*equivale a 20px*/
+h2{
+    margin-top: 1.25rem;
 }
-
-.form-container {
+.form-container{
     border: 1px solid #ccc;
-    padding: 1.25rem; /*equivale a 20px*/
-    margin-bottom: 1.25rem; /*equivale a 20px*/
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
     border-radius: 6px;
     background-color: #f9f9f9;
-}
 
-.form-container label {
+}
+.form-container label{
     display: block;
-    margin-bottom: 0.31rem; /*equivale a 5px*/
-}
+    margin-bottom: 0.31rem;
 
-.form-container input[type="text"] {
+}
+.form-container input{
     width: 100%;
-    padding: 0.62rem; /*equivale a 10px*/
-    margin-bottom: 0.62rem; /*equivale a 10px*/
+    padding: 0.62rem;
+    margin-bottom: 0.62rem;
     border-radius: 3px;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
-.btn {
+.btn{
     background-color: #fd1b1b;
     color: #fff;
     padding: 0.62rem 1.25rem;
     border: none;
     cursor: pointer;
     border-radius: 3px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
-.btn:hover {
+.btn:hover{
     background-color: #e60e0e;
     color: #fff;
-    transform: scale(1.05);
-} 
+    transform: scale(1.01);
+}
+.form-container input, select{
+    width: 100%;
+    padding: 0.62rem;
+    margin-bottom: 0.62rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+#productInfos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.62rem;
+}
+.productInputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.list-container {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-container li {
+    margin-bottom: 0.62rem;
+    padding: 0.62rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
